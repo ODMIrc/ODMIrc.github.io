@@ -1,0 +1,355 @@
+/* General */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #1b1b1f;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+h2{
+    font-size: 36px;
+    line-height: 36px;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+section{
+    padding: 20px 80px;
+
+}
+
+/* menu */
+nav{
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    background-color: #111;
+    color: #fffbff;
+    padding-top: 13px;
+    top: 0px;
+    z-index: 2;
+}
+nav ul{
+    display: inline-block;
+}
+
+nav ul li{
+    padding-top: 25px;
+    padding-left: 10px;
+    float: left;
+    margin-right: 6px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+a:hover{
+    color: #ffd7ef;
+    text-shadow: 0 0 10px #fff;
+    font-size: 20px;
+}
+
+footer{
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    background-color: #111;
+}
+
+footer ul{
+    display: inline-block;
+    
+}
+
+footer ul li{
+    float:left;
+}
+
+/* ID Y CLASES*/
+
+.titulo{
+    background-color: #77536c;
+    color: #ffd7ef;
+    border-radius: 10px;
+    padding: 10px 40px;
+    margin-bottom: 30px;
+}
+.descripcion{
+    background-color:#2d2f42;
+    color: #c4c4dd;
+    padding: 10px 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+/* Inicio */
+#logo{
+    padding-top: 0px;
+    transition: all 0.5s;
+}
+
+#logo:hover{
+    text-shadow: 0 0 10px #fff;
+    transform: scale(1.15);
+}
+
+/*Sobre nosotros*/
+
+#sobrenosotros{
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: 1fr 375px;
+    grid-gap: 30px;
+}
+
+#sobrenosotros #info div p{
+    line-height: 22px;
+}
+
+#sobrenosotros #slider{
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 600%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    z-index: 1;
+}
+
+#slider figure img{
+    width: 16.6666%;
+    float: left;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    15%{
+        left: 0;
+    }
+    20%{
+        left: -100%;
+    }
+    35%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    55%{
+        left: -200%;
+    }
+    60%{
+        left: -300%;
+    }
+    75%{
+        left: -300%;
+    }
+    80%{
+        left: -400%;
+    }
+    95%{
+        left: -400%;
+    }
+    100%{
+        left: -500%;
+    }
+
+}
+#redessociales{
+    margin-top: 20px;
+    
+}
+
+#redessociales ul li{
+    float: left;
+    margin-left: 50px;
+    font-size: 30px;
+}
+#redessociales ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+#redessociales ul li a:hover{
+    color: #c2c4fd;
+    text-shadow: 0 0 10px #fff;
+    font-size: 40px;
+}
+
+/* Categorias */
+
+#categorias{
+    background-color: #e4e1e6;
+}
+#gridcategoria{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 90px;
+    justify-content:center;
+    align-content: space-around;
+}
+
+.cardcategoria{
+    background-color: #77536c;
+    border-radius: 15px;
+    padding: 10px 15px;
+    text-align: center;
+}
+#categorias .titulo{
+    background-color: #4d57a9;
+    color: #dfe0ff;
+}
+#categorias h3, #categorias p{
+    padding-bottom: 10px;
+}
+#categorias img{
+    padding: 10px 0;
+}
+
+#categorias .masinfo button{
+    background-color: #4d57a9;
+    border: 2px solid #000965;
+    color: #dfe0ff;
+    width: 260px;
+}
+
+#categorias .separador{
+    border: 1px solid #2e1127;
+}
+@media (max-width: 400px){
+    #gridcategoria{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 30px;
+        margin: 15px 0px;
+    
+    }
+}
+
+/* Ofertas */
+
+#ofertas{
+    padding-top: 50px;
+    border-top: 2px solid #444559;
+}
+
+#conjuntoofertas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 30px;
+    margin: 10px 0px;
+}
+.card{
+    width: 200px;
+    background-color: #5b5d72;
+    color: white;
+    border-radius: 15px;
+}
+
+.card h3,.card p,.card .masinfo{
+    padding: 5px 15px;
+}
+.masinfo{
+    text-align: center;
+}
+.card img{
+    border-radius: 15px 15px 0px 0px;
+}
+.masinfo button{
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #77536c;
+    color: #ffd7ef;
+    border: 2px solid #2e1127;
+}
+
+/*Anuncios patrocinados*/
+
+#anuncios{
+    margin: 10px 0px;
+}
+#conjuntoanuncios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 30px;
+    margin: 15px 0px;
+}
+.cardanuncio{
+    width: 250px;
+    text-align: center;
+    background-color: #5b5d72;
+    border-radius: 15px;
+
+}
+.cardanuncio h3{
+    margin-bottom: 15px;
+}
+
+iframe, video{
+    border-radius: 15px 15px 0px 0px ;
+}
+
+/*Opinion*/
+
+#opinion{
+    background-color: #444559;
+}
+.itemform{
+    display: grid;
+    grid-template-columns: 90px 300px;
+    justify-content:left;
+    margin-bottom: 10px;
+}
+.itemform label{
+    font-weight: 700;
+    transition: all 0.15s;
+}
+.itemform label:hover{
+    color: #dfe0ff;
+    text-shadow: 0 0 20px #fff;
+}
+
+.itemform input, .itemform textarea{
+    border-radius: 5px;
+    border: 1px solid white;
+
+}
+
+input[type="submit"]{
+    background-color: #353e90;
+    border: 1px solid #353e90;
+    color: white;
+    padding: 10px;
+    grid-column: 2/3;
+    
+}
